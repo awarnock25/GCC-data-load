@@ -1,0 +1,394 @@
+library(tidyverse)
+
+##Read in July for test site gc165ab, and tidy
+gc165ab_July <- read.table("gc165ab_07.txt", header = F, fill = T)
+gc165ab_July <- gc165ab_July[-c(1:9),]
+gc165ab_July <- gc165ab_July[,-c(6,8:10)] 
+colnames(gc165ab_July) <- c("Site", "Day", "Date", "Start_Time","End_Time", "Sat_Count")
+
+##Read in August for test site 1, and tidy
+gc165ab_Aug <- read.table("gc165ab_08.txt", header = F, fill = T)
+gc165ab_Aug <- gc165ab_Aug[-c(1:9),]
+gc165ab_Aug <- gc165ab_Aug[,-c(6,8:10)] 
+colnames(gc165ab_Aug) <- c("Site", "Day", "Date", "Start_Time","End_Time", "Sat_Count")
+
+
+## Join both months together
+gc165ab_July %>% 
+  full_join(gc165ab_Aug) -> gc165ab_
+
+
+table(is.na(gc165ab_))
+##Make Sat_Count column numeric
+
+gc165ab_ %>% 
+  mutate(Sat_Count=as.numeric(Sat_Count)) -> gc165ab_
+
+## We now have a tidy dataset for one test site, with 2 months worth of data
+## Let's remove the July and August datasets as we no longer need them and they 
+## are only taking up room,
+
+remove(gc165ab_July)
+remove(gc165ab_Aug)
+
+###############################################################################
+
+##Read in July for test site gd143ag, and tidy
+gd143ag_July <- read.table("gd143ag_07.txt", header = F, fill = T)
+gd143ag_July <- gd143ag_July[-c(1:9),]
+gd143ag_July <- gd143ag_July[,-c(6,8:10)] 
+colnames(gd143ag_July) <- c("Site", "Day", "Date", "Start_Time","End_Time", "Sat_Count")
+
+##Read in August for test site 1, and tidy
+gd143ag_Aug <- read.table("gd143ag_08.txt", header = F, fill = T)
+gd143ag_Aug <- gd143ag_Aug[-c(1:9),]
+gd143ag_Aug <- gd143ag_Aug[,-c(6,8:10)] 
+colnames(gd143ag_Aug) <- c("Site", "Day", "Date", "Start_Time","End_Time", "Sat_Count")
+
+
+## Join both months together
+gd143ag_July %>% 
+  full_join(gd143ag_Aug) -> gd143ag_
+
+
+table(is.na(gd143ag_))
+##Make Sat_Count column numeric
+
+gd143ag_ %>% 
+  mutate(Sat_Count=as.numeric(Sat_Count)) -> gd143ag_
+
+## We now have a tidy dataset for one test site, with 2 months worth of data
+## Let's remove the July and August datasets as we no longer need them and they 
+## are only taking up room,
+
+remove(gd143ag_July)
+remove(gd143ag_Aug)
+
+###############################################################################
+
+##Read in July for test site gd0201r, and tidy
+gd0201r_July <- read.table("gd0201r_07.txt", header = F, fill = T)
+gd0201r_July <- gd0201r_July[-c(1:9),]
+gd0201r_July <- gd0201r_July[,-c(6,8:10)] 
+colnames(gd0201r_July) <- c("Site", "Day", "Date", "Start_Time","End_Time", "Sat_Count")
+
+##Read in August for test site 1, and tidy
+gd0201r_Aug <- read.table("gd0201r_08.txt", header = F, fill = T)
+gd0201r_Aug <- gd0201r_Aug[-c(1:9),]
+gd0201r_Aug <- gd0201r_Aug[,-c(6,8:10)] 
+colnames(gd0201r_Aug) <- c("Site", "Day", "Date", "Start_Time","End_Time", "Sat_Count")
+
+
+## Join both months together
+gd0201r_July %>% 
+  full_join(gd0201r_Aug) -> gd0201r_
+
+
+table(is.na(gd0201r_))
+##Make Sat_Count column numeric
+
+gd0201r_ %>% 
+  mutate(Sat_Count=as.numeric(Sat_Count)) -> gd0201r_
+
+## We now have a tidy dataset for one test site, with 2 months worth of data
+## Let's remove the July and August datasets as we no longer need them and they 
+## are only taking up room,
+
+remove(gd0201r_July)
+remove(gd0201r_Aug)
+
+###############################################################################
+
+##Read in July for test site gd2301a, and tidy
+gd2301a_July <- read.table("gd2301a_07.txt", header = F, fill = T)
+gd2301a_July <- gd2301a_July[-c(1:9),]
+gd2301a_July <- gd2301a_July[,-c(6,8:10)] 
+colnames(gd2301a_July) <- c("Site", "Day", "Date", "Start_Time","End_Time", "Sat_Count")
+
+##Read in August for test site 1, and tidy
+gd2301a_Aug <- read.table("gd2301a_08.txt", header = F, fill = T)
+gd2301a_Aug <- gd2301a_Aug[-c(1:9),]
+gd2301a_Aug <- gd2301a_Aug[,-c(6,8:10)] 
+colnames(gd2301a_Aug) <- c("Site", "Day", "Date", "Start_Time","End_Time", "Sat_Count")
+
+
+## Join both months together
+gd2301a_July %>% 
+  full_join(gd2301a_Aug) -> gd2301a_
+
+
+table(is.na(gd2301a_))
+##Make Sat_Count column numeric
+
+gd2301a_ %>% 
+  mutate(Sat_Count=as.numeric(Sat_Count)) -> gd2301a_
+
+## We now have a tidy dataset for one test site, with 2 months worth of data
+## Let's remove the July and August datasets as we no longer need them and they 
+## are only taking up room,
+
+remove(gd2301a_July)
+remove(gd2301a_Aug)
+
+###############################################################################
+
+##Read in July for test site ge0271a, and tidy
+ge0271a_July <- read.table("ge0271a_07.txt", header = F, fill = T)
+ge0271a_July <- ge0271a_July[-c(1:9),]
+ge0271a_July <- ge0271a_July[,-c(6,8:10)] 
+colnames(ge0271a_July) <- c("Site", "Day", "Date", "Start_Time","End_Time", "Sat_Count")
+
+##Read in August for test site 1, and tidy
+ge0271a_Aug <- read.table("ge0271a_08.txt", header = F, fill = T)
+ge0271a_Aug <- ge0271a_Aug[-c(1:9),]
+ge0271a_Aug <- ge0271a_Aug[,-c(6,8:10)] 
+colnames(ge0271a_Aug) <- c("Site", "Day", "Date", "Start_Time","End_Time", "Sat_Count")
+
+
+## Join both months together
+ge0271a_July %>% 
+  full_join(ge0271a_Aug) -> ge0271a_
+
+
+table(is.na(ge0271a_))
+##Make Sat_Count column numeric
+
+ge0271a_ %>% 
+  mutate(Sat_Count=as.numeric(Sat_Count)) -> ge0271a_
+
+## We now have a tidy dataset for one test site, with 2 months worth of data
+## Let's remove the July and August datasets as we no longer need them and they 
+## are only taking up room,
+
+remove(ge0271a_July)
+remove(ge0271a_Aug)
+
+###############################################################################
+
+##Read in July for test site gg267ab, and tidy
+gg267ab_July <- read.table("gg267ab_07.txt", header = F, fill = T)
+gg267ab_July <- gg267ab_July[-c(1:9),]
+gg267ab_July <- gg267ab_July[,-c(6,8:10)] 
+colnames(gg267ab_July) <- c("Site", "Day", "Date", "Start_Time","End_Time", "Sat_Count")
+
+##Read in August for test site 1, and tidy
+gg267ab_Aug <- read.table("gg267ab_08.txt", header = F, fill = T)
+gg267ab_Aug <- gg267ab_Aug[-c(1:9),]
+gg267ab_Aug <- gg267ab_Aug[,-c(6,8:10)] 
+colnames(gg267ab_Aug) <- c("Site", "Day", "Date", "Start_Time","End_Time", "Sat_Count")
+
+
+## Join both months together
+gg267ab_July %>% 
+  full_join(gg267ab_Aug) -> gg267ab_
+
+
+table(is.na(gg267ab_))
+##Make Sat_Count column numeric
+
+gg267ab_ %>% 
+  mutate(Sat_Count=as.numeric(Sat_Count)) -> gg267ab_
+
+## We now have a tidy dataset for one test site, with 2 months worth of data
+## Let's remove the July and August datasets as we no longer need them and they 
+## are only taking up room,
+
+remove(gg267ab_July)
+remove(gg267ab_Aug)
+
+###############################################################################
+
+##Read in July for test site gg0351b, and tidy
+gg0351b_July <- read.table("gg0351b_07.txt", header = F, fill = T)
+gg0351b_July <- gg0351b_July[-c(1:9),]
+gg0351b_July <- gg0351b_July[,-c(6,8:10)] 
+colnames(gg0351b_July) <- c("Site", "Day", "Date", "Start_Time","End_Time", "Sat_Count")
+
+##Read in August for test site 1, and tidy
+gg0351b_Aug <- read.table("gg0351b_08.txt", header = F, fill = T)
+gg0351b_Aug <- gg0351b_Aug[-c(1:9),]
+gg0351b_Aug <- gg0351b_Aug[,-c(6,8:10)] 
+colnames(gg0351b_Aug) <- c("Site", "Day", "Date", "Start_Time","End_Time", "Sat_Count")
+
+
+## Join both months together
+gg0351b_July %>% 
+  full_join(gg0351b_Aug) -> gg0351b_
+
+
+table(is.na(gg0351b_))
+##Make Sat_Count column numeric
+
+gg0351b_ %>% 
+  mutate(Sat_Count=as.numeric(Sat_Count)) -> gg0351b_
+
+## We now have a tidy dataset for one test site, with 2 months worth of data
+## Let's remove the July and August datasets as we no longer need them and they 
+## are only taking up room,
+
+remove(gg0351b_July)
+remove(gg0351b_Aug)
+
+###############################################################################
+
+##Read in July for test site gg0351d, and tidy
+gg0351d_July <- read.table("gg0351d_07.txt", header = F, fill = T)
+gg0351d_July <- gg0351d_July[-c(1:9),]
+gg0351d_July <- gg0351d_July[,-c(6,8:10)] 
+colnames(gg0351d_July) <- c("Site", "Day", "Date", "Start_Time","End_Time", "Sat_Count")
+
+##Read in August for test site 1, and tidy
+gg0351d_Aug <- read.table("gg0351d_08.txt", header = F, fill = T)
+gg0351d_Aug <- gg0351d_Aug[-c(1:9),]
+gg0351d_Aug <- gg0351d_Aug[,-c(6,8:10)] 
+colnames(gg0351d_Aug) <- c("Site", "Day", "Date", "Start_Time","End_Time", "Sat_Count")
+
+
+## Join both months together
+gg0351d_July %>% 
+  full_join(gg0351d_Aug) -> gg0351d_
+
+
+table(is.na(gg0351d_))
+##Make Sat_Count column numeric
+
+gg0351d_ %>% 
+  mutate(Sat_Count=as.numeric(Sat_Count)) -> gg0351d_
+
+## We now have a tidy dataset for one test site, with 2 months worth of data
+## Let's remove the July and August datasets as we no longer need them and they 
+## are only taking up room,
+
+remove(gg0351d_July)
+remove(gg0351d_Aug)
+
+###############################################################################
+
+##Read in July for test site gh2001, and tidy
+gh2001_July <- read.table("gh2001_07.txt", header = F, fill = T)
+gh2001_July <- gh2001_July[-c(1:9),]
+gh2001_July <- gh2001_July[,-c(6,8:10)] 
+colnames(gh2001_July) <- c("Site", "Day", "Date", "Start_Time","End_Time", "Sat_Count")
+
+##Read in August for test site 1, and tidy
+gh2001_Aug <- read.table("gh2001_08.txt", header = F, fill = T)
+gh2001_Aug <- gh2001_Aug[-c(1:9),]
+gh2001_Aug <- gh2001_Aug[,-c(6,8:10)] 
+colnames(gh2001_Aug) <- c("Site", "Day", "Date", "Start_Time","End_Time", "Sat_Count")
+
+
+## Join both months together
+gh2001_July %>% 
+  full_join(gh2001_Aug) -> gh2001_
+
+
+table(is.na(gh2001_))
+##Make Sat_Count column numeric
+
+gh2001_ %>% 
+  mutate(Sat_Count=as.numeric(Sat_Count)) -> gh2001_
+
+## We now have a tidy dataset for one test site, with 2 months worth of data
+## Let's remove the July and August datasets as we no longer need them and they 
+## are only taking up room,
+
+remove(gh2001_July)
+remove(gh2001_Aug)
+
+###############################################################################
+
+##Read in July for test site gj0141v, and tidy
+gj0141v_July <- read.table("gj0141v_07.txt", header = F, fill = T)
+gj0141v_July <- gj0141v_July[-c(1:9),]
+gj0141v_July <- gj0141v_July[,-c(6,8:10)] 
+colnames(gj0141v_July) <- c("Site", "Day", "Date", "Start_Time","End_Time", "Sat_Count")
+
+##Read in August for test site 1, and tidy
+gj0141v_Aug <- read.table("gj0141v_08.txt", header = F, fill = T)
+gj0141v_Aug <- gj0141v_Aug[-c(1:9),]
+gj0141v_Aug <- gj0141v_Aug[,-c(6,8:10)] 
+colnames(gj0141v_Aug) <- c("Site", "Day", "Date", "Start_Time","End_Time", "Sat_Count")
+
+
+## Join both months together
+gj0141v_July %>% 
+  full_join(gj0141v_Aug) -> gj0141v_
+
+
+table(is.na(gj0141v_))
+##Make Sat_Count column numeric
+
+gj0141v_ %>% 
+  mutate(Sat_Count=as.numeric(Sat_Count)) -> gj0141v_
+
+## We now have a tidy dataset for one test site, with 2 months worth of data
+## Let's remove the July and August datasets as we no longer need them and they 
+## are only taking up room,
+
+remove(gj0141v_July)
+remove(gj0141v_Aug)
+
+###############################################################################
+
+##Read in July for test site gl1901r, and tidy
+gl1901r_July <- read.table("gl1901r_07.txt", header = F, fill = T)
+gl1901r_July <- gl1901r_July[-c(1:9),]
+gl1901r_July <- gl1901r_July[,-c(6,8:10)] 
+colnames(gl1901r_July) <- c("Site", "Day", "Date", "Start_Time","End_Time", "Sat_Count")
+
+##Read in August for test site 1, and tidy
+gl1901r_Aug <- read.table("gl1901r_08.txt", header = F, fill = T)
+gl1901r_Aug <- gl1901r_Aug[-c(1:9),]
+gl1901r_Aug <- gl1901r_Aug[,-c(6,8:10)] 
+colnames(gl1901r_Aug) <- c("Site", "Day", "Date", "Start_Time","End_Time", "Sat_Count")
+
+
+## Join both months together
+gl1901r_July %>% 
+  full_join(gl1901r_Aug) -> gl1901r_
+
+
+table(is.na(gl1901r_))
+##Make Sat_Count column numeric
+
+gl1901r_ %>% 
+  mutate(Sat_Count=as.numeric(Sat_Count)) -> gl1901r_
+
+## We now have a tidy dataset for one test site, with 2 months worth of data
+## Let's remove the July and August datasets as we no longer need them and they 
+## are only taking up room,
+
+remove(gl1901r_July)
+remove(gl1901r_Aug)
+
+###############################################################################
+
+### Let's join all the data sets together now!
+
+gc165ab_ %>% 
+  full_join(gd0201r_) %>% 
+  full_join(gd143ag_) %>% 
+  full_join(gd2301a_) %>% 
+  full_join(ge0271a_) %>% 
+  full_join(gg0351b_) %>% 
+  full_join(gg0351d_) %>% 
+  full_join(gg267ab_) %>% 
+  full_join(gh2001_) %>% 
+  full_join(gj0141v_) %>% 
+  full_join(gl1901r_) -> full_data
+
+
+## Now that all datasets are combined into 1 big dataset we can remove them all 
+## from the global environment
+
+remove(gl1901r_)
+remove(gc165ab_)
+remove(gd143ag_)
+remove(gd0201r_)
+remove(gd2301a_)
+remove(ge0271a_)
+remove(gg0351b_)
+remove(gg0351d_)
+remove(gg267ab_)
+remove(gh2001_)
+remove(gj0141v_)
