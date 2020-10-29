@@ -1,0 +1,113 @@
+gc165ab_ %>% 
+  group_by(Start_Time) %>% 
+  summarise(Ave_Sat = mean(Sat_Count)) %>% 
+  arrange(desc(Ave_Sat)) %>% 
+  ggplot() + 
+  geom_col(aes(Start_Time, Ave_Sat)) +
+  labs(title="gc165ab_") +
+  scale_x_discrete(breaks=c("00:00", "03:00", "06:00", "09:00", "12:00", "15:00", "18:00", "21:00", "23:55"))
+
+
+gd0201r_ %>% 
+  group_by(Start_Time) %>% 
+  summarise(Ave_Sat = mean(Sat_Count)) %>% 
+  arrange(desc(Ave_Sat)) %>% 
+  ggplot() + 
+  geom_col(aes(Start_Time, Ave_Sat)) +
+  labs(title="gd0201r_") +
+  scale_x_discrete(breaks=c("00:00", "03:00", "06:00", "09:00", "12:00", "15:00", "18:00", "21:00", "23:55"))
+
+
+gd143ag_ %>% 
+  group_by(Start_Time) %>% 
+  summarise(Ave_Sat = mean(Sat_Count)) %>% 
+  arrange(desc(Ave_Sat)) %>% 
+  ggplot() + 
+  geom_col(aes(Start_Time, Ave_Sat)) +
+  labs(title="gd143ag_") +
+  scale_x_discrete(breaks=c("00:00", "03:00", "06:00", "09:00", "12:00", "15:00", "18:00", "21:00", "23:55"))
+
+
+gd2301a_ %>% 
+  group_by(Start_Time) %>% 
+  summarise(Ave_Sat = mean(Sat_Count)) %>% 
+  arrange(desc(Ave_Sat)) %>% 
+  ggplot() + 
+  geom_col(aes(Start_Time, Ave_Sat)) +
+  labs(title="gd2301a_") +
+  scale_x_discrete(breaks=c("00:00", "03:00", "06:00", "09:00", "12:00", "15:00", "18:00", "21:00", "23:55"))
+
+
+
+ge0271a_ %>% 
+  group_by(Start_Time) %>% 
+  summarise(Ave_Sat = mean(Sat_Count)) %>% 
+  arrange(desc(Ave_Sat)) %>% 
+  ggplot() + 
+  geom_col(aes(Start_Time, Ave_Sat)) +
+  labs(title="ge0271_") +
+  scale_x_discrete(breaks=c("00:00", "03:00", "06:00", "09:00", "12:00", "15:00", "18:00", "21:00", "23:55"))
+
+
+gg0351b_ %>% 
+  group_by(Start_Time) %>% 
+  summarise(Ave_Sat = mean(Sat_Count)) %>% 
+  arrange(desc(Ave_Sat)) %>% 
+  ggplot() + 
+  geom_col(aes(Start_Time, Ave_Sat))+
+  labs(title="gg0351b_") +
+  scale_x_discrete(breaks=c("00:00", "03:00", "06:00", "09:00", "12:00", "15:00", "18:00", "21:00", "23:55"))
+
+
+
+gg0351d_ %>% 
+  group_by(Start_Time) %>% 
+  summarise(Ave_Sat = mean(Sat_Count)) %>% 
+  arrange(desc(Ave_Sat)) %>% 
+  ggplot() + 
+  geom_col(aes(Start_Time, Ave_Sat)) +
+  labs(title="gg0351d_") +
+  scale_x_discrete(breaks=c("00:00", "03:00", "06:00", "09:00", "12:00", "15:00", "18:00", "21:00", "23:55"))
+
+
+
+gg267ab_ %>% 
+  group_by(Start_Time) %>% 
+  summarise(Ave_Sat = mean(Sat_Count)) %>% 
+  arrange(desc(Ave_Sat)) %>% 
+  ggplot() + 
+  geom_col(aes(Start_Time, Ave_Sat)) +
+  labs(title="gg267ab_") +
+  scale_x_discrete(breaks=c("00:00", "03:00", "06:00", "09:00", "12:00", "15:00", "18:00", "21:00", "23:55"))
+
+
+
+gh2001_ %>% 
+  group_by(Start_Time) %>% 
+  summarise(Ave_Sat = mean(Sat_Count)) %>% 
+  arrange(desc(Ave_Sat)) %>% 
+  ggplot() + 
+  geom_col(aes(Start_Time, Ave_Sat))+
+  labs(title="gh2001_") +
+  scale_x_discrete(breaks=c("00:00", "03:00", "06:00", "09:00", "12:00", "15:00", "18:00", "21:00", "23:55"))
+
+
+gj0141v_ %>% 
+  group_by(Start_Time) %>% 
+  summarise(Ave_Sat = mean(Sat_Count)) %>% 
+  arrange(desc(Ave_Sat)) %>% 
+  ggplot() + 
+  geom_col(aes(Start_Time, Ave_Sat))+
+  labs(title="gj0141v_") +
+  scale_x_discrete(breaks=c("00:00", "03:00", "06:00", "09:00", "12:00", "15:00", "18:00", "21:00", "23:55"))
+
+
+
+gl1901r_ %>% 
+  group_by(Start_Time) %>% 
+  summarise(Ave_Sat = mean(Sat_Count)) %>% 
+  arrange(desc(Ave_Sat)) %>% 
+  ggplot() + 
+  geom_col(aes(Start_Time, Ave_Sat))+
+  labs(title="gl1901r_") +
+  scale_x_discrete(breaks=c("00:00", "03:00", "06:00", "09:00", "12:00", "15:00", "18:00", "21:00", "23:55"))
